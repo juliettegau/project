@@ -1,5 +1,6 @@
 #%%
 """Cleaned_Data_Set_GDP_and_Population.py"""
+#This file is for cleaning and merging GDP and Population datasets
 # Author: dominiwm@stud.ntnu.no
 # Date: 15.10.2025
 #%%
