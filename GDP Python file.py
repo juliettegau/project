@@ -7,7 +7,7 @@ gdp_path = r"C:\Users\domin\.Python Course\API_NY.GDP.MKTP.KD.ZG_DS2_en_csv_v2_2
 pop_tot_path = r"C:\Users\domin\.Python Course\API_SP.POP.TOTL_DS2_en_csv_v2_23043.csv"
 
 countries = ["Sweden", "Germany", "Finland", "Greece", "France"]
-
+#%%
 # Load GDP growth (annual %)
 gdp = pd.read_csv(gdp_path, skiprows=4)
 gdp_sel = gdp[gdp["Country Name"].isin(countries)].drop(
