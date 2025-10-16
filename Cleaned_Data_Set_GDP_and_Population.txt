@@ -1,0 +1,6 @@
+#%%
+"""Carbon_footprints.py"""
+# Author: juudit.ottelin@ntnu.no
+# Date: 10.10.2025
+import pandas as pd
+import matplotlib.pyplot as plt
