@@ -58,7 +58,7 @@ res = (res[res["Country Name"].isin(countries)]
 res.head()
 # %%
 # Save to laptop
-save_path = r"C:\Users\domin\.Python Course\gdp_pop_percap_1990on_GRC_SWE_DEU.csv"
+save_path = r"C:\Users\domin\.Python Course\cleaned gdp_population_gdp per capita dataset.csv"
 res.to_csv(save_path, index=False)
 print("Saved to:", save_path)
 
