@@ -1,4 +1,10 @@
 #%%
+"""Cleaned_Data_Set_GDP_and_Population.py"""
+#This file is for cleaning the database of NOx and SOx
+# Author: emmasjo@stud.ntnu.no
+# Date: 16.10.2025
+
+#%%
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -28,13 +34,13 @@ cols = [ "country", "sectorName", "year", "pollutantName","value", "unit"]
 df_sox_all = (
     pd.concat([df_se_sox_nox, df_de_sox_nox, df_gr_sox_nox], ignore_index=True)
       .loc[:, cols]
-      .dropna(subset=["value"])  # valgfritt: dropp rader uten verdi
+      .dropna(subset=["value"])  
       .sort_values(["country", "year", "sectorName"])
 )
-#reading the data to a csv file
+
+#uploading the data to a csv file
 df_sox_all.to_csv(r"/Users/emmasjostrom/Desktop/project/clean_dataset/pollutant_data.csv", index=False, encoding="utf-8")
 
-df_sox_all
 
 
 
