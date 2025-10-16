@@ -32,14 +32,15 @@ df_sox_all = (
       .sort_values(["country", "year", "sectorName"])
 )
 #reading the data to a csv file
-df_sox_all.to_csv("pollutant_data.csv", index=False, encoding="utf-8")
+df_sox_all.to_csv(r"/Users/emmasjostrom/Desktop/project/clean_dataset/pollutant_data.csv", index=False, encoding="utf-8")
 
 df_sox_all
 
 
 
 
-#%% Summing it all not really cleaning the data
+#%% add the path 
+
 
 
 
