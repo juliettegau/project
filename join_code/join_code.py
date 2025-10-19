@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 
 # %%
 # import files
-df_GDP = pd.read_csv(r"clean_dataset\cleaned gdp_population_gdp per capita dataset.csv")
-df_pollutant = pd.read_csv(r"clean_dataset\pollutant_data.csv")
+df_GDP = pd.read_csv("../clean_dataset/cleaned gdp_population_gdp per capita dataset.csv")
+df_pollutant = pd.read_csv("../clean_dataset\pollutant_data.csv")
 # %%
 #check if it worked
 df_GDP
@@ -24,4 +24,17 @@ print(df_merged.head())
 # %%
 # save merged dataset
 df_merged.to_csv("merged_dataset.csv", index=False)
+# %%
+# group all values with the same year and sum the values of the pollutants
+df_merged_grouped_year = df_merged.groupby(['country', 'year', 'pollutantName'], as_index=False)['value'].sum()
+print(df_merged_grouped_year)
+
+# %% 
+# Merge grouped dataset with merged dataset to get GDP and population values
+df_merged_grouped_year = pd.merge(df_merged_grouped_year, df_GDP, left_on=["country", "year"], right_on=["Country Name", "Year"], how="left")
+print(df_merged_grouped_year)
+
+# %%
+# save merged and grouped dataset
+df_merged_grouped_year.to_csv("merged_grouped_dataset.csv", index=False)
 # %%
