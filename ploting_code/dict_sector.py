@@ -1,6 +1,6 @@
 #%%
-"""Cleaned_Data_Set_GDP_and_Population.py"""
-#This file is for understanding the sector in the pollutants database and trying to add gdp data by sector
+"""dict_sector.py"""
+#This file creating a dictionnaire that link the scetor to bigger sector to understand the economy
 # Author: julietlg@stud.ntnu.no
 # Date: 16.10.2025
 
