@@ -9,7 +9,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #%% Downloading dataset
-df_grouped = pd.read_csv('join_code\merged_grouped_dataset.csv')
+df_grouped = pd.read_csv('./join_code/merged_grouped_dataset.csv')
 
 #%% Mask
 
