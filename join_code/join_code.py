@@ -21,12 +21,16 @@ df_pollutant
 #merge datasets
 df_merged = pd.merge(df_GDP,df_pollutant,left_on=["Country Name", "Year"],right_on=["country", "year"],how="inner")
 print(df_merged.head())
+#%%
+#remove rows with sector 'NATIONAL TOTAL FOR COMPLIANCE'
+df_merged_clean = df_merged[df_merged['sectorName'] != 'NATIONAL TOTAL FOR COMPLIANCE']
+print(df_merged_clean)
 # %%
 # save merged dataset
-df_merged.to_csv("merged_dataset.csv", index=False)
+df_merged_clean.to_csv("merged_dataset.csv", index=False)
 # %%
 # group all values with the same year and sum the values of the pollutants
-df_merged_grouped_year = df_merged.groupby(['country', 'year', 'pollutantName'], as_index=False)['value'].sum()
+df_merged_grouped_year = df_merged_clean.groupby(['country', 'year', 'pollutantName'], as_index=False)['value'].sum()
 print(df_merged_grouped_year)
 
 # %% 
