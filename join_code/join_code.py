@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 # %%
 # import files
 df_GDP = pd.read_csv("../clean_dataset/cleaned gdp_population_gdp per capita dataset.csv")
-df_pollutant = pd.read_csv("../clean_dataset\pollutant_data.csv")
+df_pollutant = pd.read_csv("../clean_dataset/pollutant_data.csv")
 # %%
 #check if it worked
 df_GDP
