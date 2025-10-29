@@ -3,11 +3,11 @@
 #This file is to plot data from the grouped_data
 # Author: julietlg@stud.ntnu.no
 # Date: 21.10.2025
-# changing the code making seperate plots
+# changing the code making seperate plots and changing the font
 # Author: dominiwm@stud.ntnu.no
 # Date: 22.10.2025
 
-#%% Importing library
+#%% Importing libraries
 import pandas as pd
 import matplotlib.pyplot as plt
 
