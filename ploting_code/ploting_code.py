@@ -1,15 +1,18 @@
 #%%
 """ploting_code.py"""
-#This file is a first try to plot data from the grouped_data
+#This file is to plot data from the grouped_data
 # Author: julietlg@stud.ntnu.no
 # Date: 21.10.2025
+# changing the code
+# Author: dominiwm@stud.ntnu.no
+# Date: 22.10.2025
 
 #%% Importing librairy
 import pandas as pd
 import matplotlib.pyplot as plt
 
 #%% Downloading dataset
-df_grouped = pd.read_csv('join_code\merged_grouped_dataset.csv')
+df_grouped = pd.read_csv('./join_code/merged_grouped_dataset.csv')
 
 #%% Mask
 
