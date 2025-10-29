@@ -3,7 +3,7 @@
 #This file is to plot data from the grouped_data
 # Author: julietlg@stud.ntnu.no
 # Date: 21.10.2025
-# changing the code
+# changing the code making seperate plots
 # Author: dominiwm@stud.ntnu.no
 # Date: 22.10.2025
 
