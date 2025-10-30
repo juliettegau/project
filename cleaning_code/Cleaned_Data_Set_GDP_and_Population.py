@@ -13,14 +13,9 @@ import matplotlib.pyplot as plt
 # Import GDP & Population dataset
 df_Population = pd.read_excel(r"C:\Users\domin\.Python Course\Population total.xlsx", sheet_name="Data", skiprows=3)
 df_GDP = pd.read_excel(r"C:\Users\domin\.Python Course\GDP_absolute.xlsx", sheet_name="Data", skiprows=3)
-# %%
-# Explore data structure
-df_Population.head()
-df_GDP.head()
-df_Population.shape
-df_GDP.shape
-df_Population.describe()
-df_GDP.describe()
+df_Population
+#%%
+df_GDP
 # %%
 # Countries of interest
 countries = ["Greece", "Sweden", "Germany"]
