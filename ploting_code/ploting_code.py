@@ -174,4 +174,3 @@ plt.savefig("../ploting_code/Plots/SOx_GDP_Greece.png", dpi=300)
 plt.show()
 
 # %%
-# %%

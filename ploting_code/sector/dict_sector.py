@@ -21,12 +21,11 @@ dict_sectors = dict(zip(df_sectors["sectorName"], df_sectors["supersectorName"])
 #%% Create new column
 df_pol["supersectorName"] = df_pol["sectorName"].map(dict_sectors)
 
-#%% Create a pie chart
+#%% Create a pie chart - change to sum of emissions per supersector
 data_per_supersectors = df_pol["supersectorName"].value_counts()
 labels_supersectors = data_per_supersectors.index
 data_per_sectors = df_pol["sectorName"].value_counts()
 labels_sectors = data_per_sectors.index  
-
 # Pie chart for super sectors
 plt.figure(figsize=(8, 8))
 plt.pie(data_per_supersectors, labels=labels_supersectors, autopct='%1.1f%%', startangle=90, textprops={'fontfamily': 'Segoe UI', 'fontsize': 12})
