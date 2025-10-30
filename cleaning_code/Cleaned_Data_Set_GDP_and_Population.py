@@ -32,7 +32,7 @@ p
 # %%
 g
 # %%
-# Merge + per-capita
+# Merge files + calculation per-capita
 res = pd.merge(g, p, on=["Country Name", "Year"])
 res["gdp_per_capita"] = res["GDP_USD"] / res["Population"]
 res["Year"] = res["Year"].astype(int)
@@ -42,7 +42,7 @@ countries = ["Greece", "Sweden", "Germany"]
 res = (res[res["Country Name"].isin(countries)] [["Country Name", "Year", "Population", "GDP_USD", "gdp_per_capita"]].sort_values(["Country Name", "Year"]).reset_index(drop=True))
 res
 # %%
-# Save
+# Save file
 save_path = r"C:\Users\domin\.Python Course\cleaned gdp_population_gdp per capita dataset.csv"
 res.to_csv(save_path, index=False)
 
