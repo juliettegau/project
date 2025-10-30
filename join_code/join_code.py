@@ -19,7 +19,9 @@ df_GDP
 df_pollutant
 # %%
 #merge datasets
-df_merged = pd.merge(df_GDP,df_pollutant,left_on=["Country Name", "Year"],right_on=["country", "year"],how="inner")
+df_merged = pd.merge(df_GDP,df_pollutant,
+                     left_on=["Country Name", "Year"],right_on=["country", "year"],
+                     how="inner")
 print(df_merged.head())
 #%%
 #remove rows with sector 'NATIONAL TOTAL FOR COMPLIANCE'
@@ -30,12 +32,15 @@ print(df_merged_clean)
 df_merged_clean.to_csv("merged_dataset.csv", index=False)
 # %%
 # group all values with the same year and sum the values of the pollutants
-df_merged_grouped_year = df_merged_clean.groupby(['country', 'year', 'pollutantName'], as_index=False)['value'].sum()
+df_merged_grouped_year = df_merged_clean.groupby
+(['country', 'year', 'pollutantName'], as_index=False)['value'].sum()
 print(df_merged_grouped_year)
 
 # %% 
 # Merge grouped dataset with merged dataset to get GDP and population values
-df_merged_grouped_year = pd.merge(df_merged_grouped_year, df_GDP, left_on=["country", "year"], right_on=["Country Name", "Year"], how="left")
+df_merged_grouped_year = pd.merge(df_merged_grouped_year, df_GDP, 
+                                  left_on=["country", "year"], 
+                                  right_on=["Country Name", "Year"], how="left")
 print(df_merged_grouped_year)
 
 # %%

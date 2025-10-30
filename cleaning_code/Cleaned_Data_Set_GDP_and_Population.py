@@ -39,7 +39,9 @@ res["Year"] = res["Year"].astype(int)
 res
 # %%
 countries = ["Greece", "Sweden", "Germany"]
-res = (res[res["Country Name"].isin(countries)] [["Country Name", "Year", "Population", "GDP_USD", "gdp_per_capita"]].sort_values(["Country Name", "Year"]).reset_index(drop=True))
+res = (res[res["Country Name"].isin(countries)] 
+       [["Country Name", "Year", "Population", "GDP_USD", "gdp_per_capita"]]
+       .sort_values(["Country Name", "Year"]).reset_index(drop=True))
 res
 # %%
 # Save file
