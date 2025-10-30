@@ -8,6 +8,8 @@
 # Date: 22.10.2025
 
 #%% Importing libraries
+import os
+import geopandas as gpd
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -146,7 +148,7 @@ plt.xlabel("GDP (USD)", fontsize=16, fontfamily="Segoe UI")
 plt.ylabel("SOx Emissions (kt)", fontsize=16, fontfamily="Segoe UI")
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("../ploting_code/Plots/SOx__GDP_Germany.png", dpi=300)
+plt.savefig("../ploting_code/Plots/SOx_GDP_Germany.png", dpi=300)
 plt.show()
 
 # Sweden
@@ -157,7 +159,7 @@ plt.xlabel("GDP (USD)", fontsize=16, fontfamily="Segoe UI")
 plt.ylabel("SOx Emissions (kt)", fontsize=16, fontfamily="Segoe UI")
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("../ploting_code/Plots/SOx__GDP_Sweden.png", dpi=300)
+plt.savefig("../ploting_code/Plots/SOx_GDP_Sweden.png", dpi=300)
 plt.show()
 
 # Greece
@@ -171,3 +173,5 @@ plt.tight_layout()
 plt.savefig("../ploting_code/Plots/SOx_GDP_Greece.png", dpi=300)
 plt.show()
 
+# %%
+# %%
