@@ -31,6 +31,15 @@ df_merged_clean
 # %%
 # save merged dataset
 df_merged_clean.to_csv("merged_dataset.csv", index=False)
+
+# %%
+# NOx and SOx into separate columns
+df_merged_clean_seperate_NOx_SOx = df_merged_clean.pivot(index=["country", "year", "sectorName", "Population", "GDP_USD", "gdp_per_capita"], columns="pollutantName", values="value").reset_index()
+df_merged_clean_seperate_NOx_SOx
+
+# %%
+# save merged and seperated dataset
+df_merged_clean_seperate_NOx_SOx.to_csv("merged_dataset.csv", index=False)
 # %%
 # group all values with the same year and sum the values of the pollutants
 df_merged_grouped_year = df_merged_clean.groupby(['country', 'year', 'pollutantName'], as_index=False)['value'].sum()
@@ -55,4 +64,5 @@ df_merged_seperate_NOx_SOx
 # %%
 # save merged, grouped and seperated dataset
 df_merged_seperate_NOx_SOx.to_csv("merged_grouped_seperate_NOx_SOx.csv", index=False)
+
 # %%
