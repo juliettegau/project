@@ -39,7 +39,7 @@ df_merged_clean_seperate_NOx_SOx
 
 # %%
 # save merged and seperated dataset
-df_merged_clean_seperate_NOx_SOx.to_csv("merged_dataset.csv", index=False)
+df_merged_clean_seperate_NOx_SOx.to_csv("merged_clean_seperate_NOx_SOx.csv", index=False)
 # %%
 # group all values with the same year and sum the values of the pollutants
 df_merged_grouped_year = df_merged_clean.groupby(['country', 'year', 'pollutantName'], as_index=False)['value'].sum()
