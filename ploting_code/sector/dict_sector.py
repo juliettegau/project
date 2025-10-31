@@ -12,8 +12,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #%% Importing datasets
-df_pol = pd.read_csv("../clean_dataset/pollutant_data.csv")
-df_sectors = pd.read_excel("../ploting_code/sector/sectors_list.xlsx")
+df_pol = pd.read_csv("../../clean_dataset/pollutant_data.csv")
+df_sectors = pd.read_excel("rsectors_list.xlsx")
 
 #%% Create a dictionnaire
 dict_sectors = dict(zip(df_sectors["sectorName"], df_sectors["supersectorName"]))
