@@ -1,6 +1,6 @@
 #%%
 """stat_code_1.py"""
-#This file is use to do some satitucs on the df and to show correlation between variables
+#This file is use to calculate correlation coefficient on the GE data of NOx
 # Author: julietlg@stud.ntnu.no
 # Date: 26.10.2025
 
@@ -19,7 +19,7 @@ data_ge = data[(data["country"] == "Germany")&(data["pollutantName"] == "NOx")]
 data_ge = data_ge.drop(["country","pollutantName", "Country Name","Year"],axis = 1)
 
 # %% calculate corr
-corr = data_ge.corr()
+corr = data_ge.corr(method='pearson')
 
 # %% Plot corr
 colors = ["darkred", "white", "darkred"]
@@ -34,19 +34,18 @@ sns.heatmap(
     vmin=-1, vmax=1 # pour que -1 et +1 soient la même intensité
 )
 plt.show()
-# %% Test de statitics Spearman non lin
+# %% Tcoeff Spearman non lin
 from scipy.stats import spearmanr
-
-r, p = spearmanr(data_ge["value"], data_ge["GDP_USD"])
-print(r, p)
-if p < 0.05 :
-    print('Hypothesis valid, p-value :',p)
-
-# %% Test de statitics Pearson lin
-from scipy.stats import pearsonr
 
 x = data_ge["value"]
 y = data_ge["GDP_USD"]
+
+r, p = spearmanr(x, y)
+print(r, p)
+
+
+# %%Coeff Pearson lin
+from scipy.stats import pearsonr
 
 r, p = pearsonr(x, y)
 
